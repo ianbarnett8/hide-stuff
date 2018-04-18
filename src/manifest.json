@@ -1,0 +1,20 @@
+{
+  "manifest_version": 2,
+
+  "name": "Hide Stuff",
+  "description": "This extension remove stuff you don't want to see",
+  "version": "1.0",
+  
+  "content_scripts": [
+    {
+      "matches": ["https://www.algolia.com/apps/*"],
+      "css": ["hide-stuff.css"],
+      "js": ["jquery-3.2.1.slim.min.js", "hide-stuff.js"]
+    }
+  ],
+
+  "page_action": {
+    "default_icon": "hide-stuff.png",
+    "default_title": "Hide Stuff!"
+  }
+}
